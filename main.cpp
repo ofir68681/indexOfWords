@@ -5,7 +5,14 @@
 #include "QueryResult.h"
 using namespace std;
 
-int main(int argc, char **argv)
+int main(int argc, char **argv){ //for debugging
+	ifstream infile("phone.txt");
+	if (!infile) { cerr << "No input file!" << endl; exit(1); }
+	TextQuery tq(infile);
+}
+
+
+int main1(int argc, char **argv)
 {
   ifstream infile(argv[1]);
   if (!infile) { cerr << "No input file!" << endl; exit(1); }
